@@ -1,0 +1,21 @@
+"*":
+  core:
+    autoHideMenuBar: true
+    themes: [
+      "one-dark-ui"
+      "firewatch-syntax"
+    ]
+  editor:
+    fontFamily: "\"Ubuntu Mono\",\"Noto Sans CJK\""
+    fontSize: 18
+    scrollPastEnd: true
+  "exception-reporting":
+    userId: "e060c708-f32a-2ecd-6cfc-c9287d2bc1d1"
+  linter:
+    lintOnFly: false
+    showErrorPanel: false
+  pigments:
+    markerType: "dot"
+  "tree-view": {}
+  welcome:
+    showOnStartup: false
