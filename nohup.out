@@ -1,1 +1,4 @@
-App load time: 1852ms
+App load time: 1087ms
+(electron) app.getDataPath is deprecated. Use app.getPath instead.
+Created new window in existing browser session.
+Created new window in existing browser session.
