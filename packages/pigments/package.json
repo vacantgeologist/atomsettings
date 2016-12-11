@@ -1,7 +1,7 @@
 {
   "name": "pigments",
   "main": "./lib/pigments",
-  "version": "0.34.0",
+  "version": "0.37.0",
   "description": "A package to display colors in project and files.",
   "keywords": [
     "colors",
@@ -67,6 +67,7 @@
     "sourceNames": {
       "type": "array",
       "default": [
+        "**/*.css",
         "**/*.styl",
         "**/*.stylus",
         "**/*.less",
@@ -157,9 +158,14 @@
       "default": false,
       "description": "When enabled, the autocomplete provider will also provides color value."
     },
+    "autocompleteSuggestionsFromValue": {
+      "type": "boolean",
+      "default": false,
+      "description": "When enabled, the autocomplete provider will suggests color variables from hexadecimal values."
+    },
     "markerType": {
       "type": "string",
-      "default": "background",
+      "default": "native-background",
       "enum": [
         "native-background",
         "native-underline",
@@ -213,6 +219,16 @@
       "type": "boolean",
       "default": true,
       "title": "Ignore VCS Ignored Paths"
+    },
+    "notifyReloads": {
+      "type": "boolean",
+      "default": true,
+      "description": "Whether Pigments will use a notification once the `Pigments: Reload` command completes or not. The notification includes informations about the result of the reload."
+    },
+    "dismissableReloadNotifications": {
+      "type": "boolean",
+      "default": true,
+      "description": "Whether the reload notifications should be dismissed by a user action or not."
     }
   },
   "dependencies": {
@@ -234,10 +250,10 @@
     "url": "https://github.com/abe33/atom-pigments/issues"
   },
   "homepage": "https://github.com/abe33/atom-pigments#readme",
-  "_id": "pigments@0.34.0",
-  "_shasum": "4ca0c65baf75692d86730d81f563f48cea67fe53",
-  "_resolved": "file:../d-11681-9856-9f22re/package.tgz",
-  "_from": "../d-11681-9856-9f22re/package.tgz",
+  "_id": "pigments@0.37.0",
+  "_shasum": "2c8e92049614b6c274aad087caee9c3e3658fa18",
+  "_resolved": "file:../d-1161026-32513-r0chrc/package.tgz",
+  "_from": "../d-1161026-32513-r0chrc/package.tgz",
   "_atomModuleCache": {
     "version": 1,
     "dependencies": [
@@ -313,7 +329,7 @@
       },
       {
         "name": "event-kit",
-        "version": "2.1.0",
+        "version": "2.2.0",
         "path": "node_modules/atom-utils/node_modules/grim/node_modules/event-kit/lib/event-kit.js"
       },
       {
@@ -368,12 +384,12 @@
       },
       {
         "name": "event-kit",
-        "version": "2.1.0",
+        "version": "2.2.0",
         "path": "node_modules/event-kit/lib/event-kit.js"
       },
       {
         "name": "fs-plus",
-        "version": "2.9.1",
+        "version": "2.9.3",
         "path": "node_modules/fs-plus/lib/fs-plus.js"
       },
       {
@@ -1366,10 +1382,10 @@
           "node_modules/fs-plus"
         ],
         "dependencies": {
-          "underscore-plus": "1.x",
+          "async": "~0.2.9",
           "mkdirp": "~0.3.5",
           "rimraf": "~2.2.2",
-          "async": "~0.2.9"
+          "underscore-plus": "1.x"
         }
       },
       {
