@@ -1,13 +1,15 @@
 "*":
   core:
     autoHideMenuBar: true
+    telemetryConsent: "limited"
     themes: [
       "one-dark-ui"
-      "firewatch-syntax"
+      "gruvbox-plus-syntax"
     ]
   editor:
     fontFamily: "\"Ubuntu Mono\",\"Noto Sans CJK\""
-    fontSize: 19
+    fontSize: 18
+    lineHeight: 1.6
     scrollPastEnd: true
   "exception-reporting":
     userId: "e060c708-f32a-2ecd-6cfc-c9287d2bc1d1"
